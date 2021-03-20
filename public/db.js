@@ -33,7 +33,7 @@ function saveRecord(record){
 function checkDatabase() {
     const transaction = db.transaction(["pending"],"readwrite");
     const store = transaction.objectStore("pending");
-    const getAll = store.getAll();
+    const getAll = store.getAll(); 
 
     getAll.onsuccess = function(){
         if(getAll.result.length > 0){
@@ -56,4 +56,4 @@ function checkDatabase() {
     }
 
 }
-window.addEventListener("online",checkDatabase);
+addEventListener("online",checkDatabase);
