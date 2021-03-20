@@ -22,7 +22,7 @@ request.onsuccess = function(e) {
 request.onerror = function(e){
     console.log("Do'h" + e.target.errorCode);
 
-};
+}; 
 
 function saveRecord(record){
     const transaction = db.transaction(["pending"],"readwrite");
