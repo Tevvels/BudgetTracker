@@ -1,8 +1,8 @@
 
 let db;
-const request = indexedDB.open("budget",1);
+const rqt = indexedDB.open("budget",1);
 
-request.onupgradeneeded = function(e) {
+rqt.onupgradeneeded = function(e) {
     const db = e.target.result;
     db.createObjectStore("pending", { autoIncrement: true});
      
@@ -10,7 +10,7 @@ request.onupgradeneeded = function(e) {
 };
 
 
-request.onsuccess = function(e) {
+rqt.onsuccess = function(e) {
     db = e.target.result;
 
     if(navigator.onLine) {
@@ -19,7 +19,7 @@ request.onsuccess = function(e) {
 };
 
 
-request.onerror = function(e){
+rqt.onerror = function(e){
     console.log("Do'h" + e.target.errorCode);
 
 }; 
