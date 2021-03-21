@@ -31,3 +31,5 @@
 
 
   ##<h2> for Heroku </h2> https://dry-lowlands-45443.herokuapp.com/ 
+
+![mainpage](./public/images/budget-main.png)
